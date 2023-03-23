@@ -1,0 +1,1 @@
+create and config first tailwindcss project
