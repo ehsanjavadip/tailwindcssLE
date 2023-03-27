@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./build/tailwind.css" />
+		<title>Document</title>
+	</head>
+	<body class="bg-slate-200 h-screen flex justify-center items-center">
+		
+        <div class="relative" x-data="{ isOpen: false }">
+			<button
+				class="bg-blue-700 focus:ring-2 focus:ring-offset-2 relative z-10 text-white p-4 rounded-lg inline-flex items-center"
+				@click="isOpen=!isOpen">
+				<span class=""> show more </span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+				</svg>
+			</button>
+            <button x-show="isOpen" @click="isOpen=false" class="cursor-auto h-screen w-screen fixed bg-gray-200 opacity-40 top-0 left-0"></button>
+			<div
+				x-show="isOpen"
+				class="bg-white w-56 mt-2 overflow-hidden rounded-lg absolute">
+				<a
+					href=""
+					class="block text-gray-700 p-2 hover:bg-gray-100 border border-gray-100"
+					>Account</a
+				>
+				<a
+					href=""
+					class="block text-gray-700 p-2 hover:bg-gray-100 border border-gray-100"
+					>Suppurt</a
+				>
+				<a
+					href=""
+					class="block text-gray-700 p-2 hover:bg-gray-100 border border-gray-100"
+					>setting</a
+				>
+			</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, illum.</p>
+		</div>
+		<script src="//unpkg.com/alpinejs" defer></script>
+	</body>
+</html>
