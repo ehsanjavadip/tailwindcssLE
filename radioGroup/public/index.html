@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./build/tailwind.css" />
+		<title>Document</title>
+	</head>
+	<body class="bg-blue-700 h-screen flex justify-center items-center">
+
+		<div x-data="{options:1}" class="flex flex-col justify-center gap-4">
+
+			<div @click="options=1" :class="options===1 ? 'text-white bg-blue-300 ring-1 ring-offset-2 ring-blue-100' : 'bg-white text-gray-400' " class="p-2 rounded-xl w-96 h-24 flex items-center justify-center  text-left text-xs  cursor-pointer">
+				
+				<div class="flex justify-between w-full">
+					<span>
+						<p>Startup</p>
+						<p>12GB/6 CPUs · 160 GB SSD disk</p>
+					</span>
+					<div x-show="options===1" class="rounded-full p-2 bg-blue-500 flex items-center justify-center h-8 w-8 text-white">					
+						<svg
+							class="h-6 w-6"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M4.5 12.75l6 6 9-13.5" />
+						</svg>
+					</div>
+				</div>
+
+			</div>
+
+			<div @click="options=2" :class="options===2 ? 'text-white bg-blue-300 ring-1 ring-offset-2 ring-blue-100' : 'bg-white text-gray-400' "  class="p-2 rounded-xl w-96 h-24 flex items-center justify-center text-left text-xs  cursor-pointer">
+				
+				<div class="flex justify-between w-full">
+					<span>
+						<p>Business</p>
+						<p>16GB/8 CPUs · 512 GB SSD disk</p>
+					</span>
+					<div x-show="options===2" class="rounded-full p-2 flex items-center justify-center bg-blue-500 h-8 w-8 text-white">
+						<svg
+							class="h-6 w-6"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M4.5 12.75l6 6 9-13.5" />
+						</svg>
+					</div>
+				</div>
+
+			</div>
+
+			<div @click="options=3" :class="options===3 ? 'text-white bg-blue-300 ring-1 ring-offset-2 ring-blue-100' : 'bg-white text-gray-400' "  class="p-2 rounded-xl w-96 h-24 flex items-center justify-center text-left text-xs  cursor-pointer">
+				
+				<div class="flex justify-between w-full">
+					<span>
+						<p>Enterprise</p>
+						<p>32GB/12 CPUs · 1024 GB SSD disk</p>
+					</span>
+					<div x-show="options===3" class="rounded-full p-2 bg-blue-500 flex items-center justify-center h-8 w-8  text-white">
+						<svg
+							class="h-6 w-6"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M4.5 12.75l6 6 9-13.5" />
+						</svg>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<script src="//unpkg.com/alpinejs" defer></script>
+	</body>
+</html>
