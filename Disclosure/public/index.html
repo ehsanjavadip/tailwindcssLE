@@ -10,7 +10,7 @@
 	<body class="bg-gray-200 h-screen flex justify-center items-center">
 		<div
 			x-data="{pos1:false,pos2:false}"
-			class="flex bg-white rounded-xl  flex-col justify-center gap-4 p-3 w-[500px]">
+			class="flex bg-white rounded-xl flex-col justify-center gap-4 p-3 max-w-md w-full">
 			<div class="rounded-lg overflow-hidden">
 				<div
 					@click="pos1 = !pos1"
@@ -27,8 +27,9 @@
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+							d="M4.5 15.75l7.5-7.5 7.5 7.5" />
 					</svg>
+					
 				</div>
 				<div x-show="pos1" class="px-4 my-4 text-gray-600">
 					If you're unhappy with your purchase for any reason, email us within
@@ -52,12 +53,12 @@
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+							d="M4.5 15.75l7.5-7.5 7.5 7.5" />
 					</svg>
 				</div>
 				<div x-show="pos2" class="px-4 my-4 text-gray-600">No.</div>
 			</div>
 		</div>
-		<script src="//unpkg.com/alpinejs" defer></script>
+		<script src="./../src/js/main.js" defer></script>
 	</body>
 </html>
