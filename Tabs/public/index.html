@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./build/tailwind.css" />
+		<title>Document</title>
+	</head>
+	<body class="bg-blue-600 h-screen flex justify-center items-center">
+		<div
+			x-data="{state:1,
+				ActiveHead:'bg-white  text-blue-500 ring-offset-blue-500 ring-opacity-60 ring-white ring-2 ring-offset-2',
+				DeActiveHead:'hover:bg-opacity-20 hover:bg-slate-400 hover:text-white',
+				ActiveSub:'ring-2 ring-blue-400 ring-offset-2',
+				foc:0}"
+			class="flex rounded-xl flex-col justify-center gap-4 p-3 max-w-xl w-full">
+			<div
+				class="flex w-full bg-slate-300 bg-opacity-20 text-xl rounded-lg justify-between items-center p-3">
+				<div
+					@click="state=1"
+					:class="state === 1 ? ActiveHead : DeActiveHead"
+					class="p-4  rounded-lg cursor-pointer  px-10">
+					Recent
+				</div>
+				<div
+					@click="state=2"
+					:class="state === 2 ? ActiveHead : DeActiveHead"
+					class="p-4 rounded-lg cursor-pointer px-10">
+					Popular
+				</div>
+				<div
+					@click="state=3"
+					:class="state === 3 ? ActiveHead : DeActiveHead"
+					class="p-4 rounded-lg cursor-pointer px-10">
+					Trending
+				</div>
+			</div>
+
+			<div class="mt-1 w-full bg-white p-6 rounded-lg">
+				<div x-show="state===1" class="flex flex-col gap-y-4">
+					<div @click="foc=11" :class="foc===11 ? ActiveSub : ''" class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>Does drinking coffee make you smarter?</h2>
+						<p>5h ago · 5 comments · 2 shares</p>
+					</div>
+					<div @click="foc=12" :class="foc===12 ? ActiveSub : ''"  class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>Is tech making coffee better or worse?</h2>
+						<p>Jan 7 · 29 comments · 16 shares</p>
+					</div>
+				</div>
+				<div x-show="state===2" class="flex flex-col gap-y-4">
+					<div @click="foc=21" :class="foc===21 ? ActiveSub : ''"  class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>Is tech making coffee better or worse?</h2>
+						<p>Jan 7 · 29 comments · 16 shares</p>
+					</div>
+					<div @click="foc=22" :class="foc===22 ? ActiveSub : ''"  class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>The most innovative things happening in coffee</h2>
+						<p>Mar 19 · 24 comments · 12 shares</p>
+					</div>
+				</div>
+				<div x-show="state===3" class="flex flex-col gap-y-4">
+					<div @click="foc=31" :class="foc===31 ? ActiveSub : ''"  class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>Ask Me Anything: 10 answers to your questions about coffee</h2>
+						<p>2d ago · 9 comments · 5 shares</p>
+					</div>
+					<div @click="foc=32" :class="foc===32 ? ActiveSub : ''"  class="cursor-pointer hover:bg-slate-100 p-3 rounded-lg">
+						<h2>The worst advice we've ever heard about coffee</h2>
+						<p>4d ago · 1 comments · 2 shares</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./../src/js/main.js" defer></script>
+	</body>
+</html>

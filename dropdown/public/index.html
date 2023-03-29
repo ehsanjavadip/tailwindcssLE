@@ -8,8 +8,7 @@
 		<title>Document</title>
 	</head>
 	<body class="bg-slate-200 h-screen flex justify-center items-center">
-		
-        <div class="relative" x-data="{ isOpen: false }">
+		<div class="relative" x-data="{ isOpen: false }">
 			<button
 				class="bg-blue-700 focus:ring-2 focus:ring-offset-2 relative z-10 text-white p-4 rounded-lg inline-flex items-center"
 				@click="isOpen=!isOpen">
@@ -27,7 +26,10 @@
 						d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
 				</svg>
 			</button>
-            <button x-show="isOpen" @click="isOpen=false" class="cursor-auto h-screen w-screen fixed bg-gray-200 opacity-40 top-0 left-0"></button>
+			<button
+				x-show="isOpen"
+				@click="isOpen=false"
+				class="cursor-auto h-screen w-screen fixed bg-gray-200 opacity-40 top-0 left-0"></button>
 			<div
 				x-show="isOpen"
 				class="bg-white w-56 mt-2 overflow-hidden rounded-lg absolute">
@@ -47,7 +49,9 @@
 					>setting</a
 				>
 			</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, illum.</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, illum.
+			</p>
 		</div>
 		<script src="//unpkg.com/alpinejs" defer></script>
 	</body>
